@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootPane" maxHeight="650.0" minHeight="589.0" prefHeight="650.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recruitment.system.ui.addclient.AddClientController">
+   <children>
+      <AnchorPane fx:id="mainContainer" prefHeight="480.0" prefWidth="1080.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Pane layoutY="34.0" opacity="0.2" prefHeight="96.0" prefWidth="1080.0" style="-fx-background-color: #64FCD9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="34.0" />
+            <HBox layoutY="26.0" prefHeight="50.0" prefWidth="1000.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="26.0">
+               <children>
+                  <Button fx:id="btnBack" mnemonicParsing="false" onAction="#closeStage" style="-fx-background-color: Transparent;" text="Back to Dashboard" textFill="#b2b2b2">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/back-gray.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="60.0" top="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="TOP_CENTER" layoutY="76.0" prefHeight="48.0" prefWidth="1080.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+               <children>
+                  <HBox prefHeight="48.0" prefWidth="158.0">
+                     <children>
+                        <ImageView fitHeight="45.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/left-logo.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="44.0" fitWidth="187.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/word-logo.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="-10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="-20.0" />
+                     </HBox.margin>
+                  </HBox>
+               </children>
+            </HBox>
+            <VBox layoutY="130.0" prefHeight="120.0" prefWidth="1080.0" spacing="10.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="526.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="130.0">
+               <padding>
+                  <Insets left="60.0" right="60.0" top="15.0" />
+               </padding>
+               <children>
+                  <VBox>
+                     <children>
+                        <Label prefHeight="36.0" prefWidth="345.0" text="Add New Client Organization">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label graphicTextGap="6.0" prefHeight="19.0" text="Required">
+                           <graphic>
+                              <Circle fill="#ffb61d" radius="3.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                           </graphic>
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="-5.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <HBox layoutY="190.0" prefHeight="507.0" prefWidth="1080.0" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="190.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                     <padding>
+                        <Insets left="60.0" right="20.0" top="50.0" />
+                     </padding>
+                     <children>
+                        <HBox spacing="10.0">
+                           <children>
+                              <VBox prefHeight="62.0" prefWidth="121.0" spacing="5.0">
+                                 <children>
+                                    <Label graphicTextGap="6.0" prefHeight="17.0" text="Client ID">
+                                       <font>
+                                          <Font name="Arial Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtClientID" editable="false" prefHeight="40.0" prefWidth="163.0" styleClass="textfield" stylesheets="@../../../../resources/stylesheet.css" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="10.0" layoutY="10.0" prefHeight="62.0" prefWidth="352.0" spacing="5.0">
+                                 <children>
+                                    <Label graphicTextGap="6.0" prefHeight="17.0" text="Company Name">
+                                       <font>
+                                          <Font name="Arial Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtCompanyName" prefHeight="40.0" prefWidth="163.0" styleClass="textfield" stylesheets="@../../../../resources/stylesheet.css" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <VBox prefHeight="62.0" prefWidth="200.0" spacing="5.0">
+                           <children>
+                              <Label contentDisplay="RIGHT" graphicTextGap="6.0" prefHeight="17.0" text="First Name">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <Circle fill="#ffb61d" radius="3.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                                 </graphic>
+                              </Label>
+                              <TextField fx:id="txtFirstName" prefHeight="40.0" prefWidth="675.0" styleClass="textfield" stylesheets="@../../../../resources/stylesheet.css" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="62.0" prefWidth="200.0" spacing="5.0">
+                           <children>
+                              <Label contentDisplay="RIGHT" graphicTextGap="6.0" prefHeight="17.0" text="Middle Name">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <Circle fill="#ffb61d" radius="3.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                                 </graphic>
+                              </Label>
+                              <TextField fx:id="txtMidName" prefHeight="40.0" prefWidth="675.0" styleClass="textfield" stylesheets="@../../../../resources/stylesheet.css" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="62.0" prefWidth="200.0" spacing="5.0">
+                           <children>
+                              <Label contentDisplay="RIGHT" graphicTextGap="6.0" prefHeight="17.0" text="Last Name">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <Circle fill="#ffb61d" radius="3.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                                 </graphic>
+                              </Label>
+                              <TextField fx:id="txtLastName" prefHeight="40.0" prefWidth="675.0" styleClass="textfield" stylesheets="@../../../../resources/stylesheet.css" />
+                           </children>
+                        </VBox>
+                        <HBox spacing="10.0">
+                           <children>
+                              <VBox prefHeight="62.0" prefWidth="200.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label contentDisplay="RIGHT" graphicTextGap="6.0" prefHeight="17.0" text="Mobile Number">
+                                       <font>
+                                          <Font name="Arial Bold" size="14.0" />
+                                       </font>
+                                       <graphic>
+                                          <Circle fill="#ffb61d" radius="3.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                                       </graphic>
+                                    </Label>
+                                    <TextField fx:id="txtMobNumber" prefHeight="40.0" prefWidth="675.0" styleClass="textfield" stylesheets="@../../../../resources/stylesheet.css" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="10.0" layoutY="10.0" prefHeight="62.0" prefWidth="200.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label contentDisplay="RIGHT" graphicTextGap="6.0" prefHeight="17.0" text="Telephone Number">
+                                       <font>
+                                          <Font name="Arial Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtTelNumber" prefHeight="40.0" prefWidth="675.0" styleClass="textfield" stylesheets="@../../../../resources/stylesheet.css" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="70.0" layoutY="328.0" spacing="10.0" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                     <padding>
+                        <Insets left="20.0" right="60.0" top="50.0" />
+                     </padding>
+                     <children>
+                        <VBox prefHeight="62.0" prefWidth="200.0" spacing="5.0">
+                           <children>
+                              <Label contentDisplay="RIGHT" graphicTextGap="6.0" prefHeight="17.0" text="Email Address">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <Circle fill="#ffb61d" radius="3.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                                 </graphic>
+                              </Label>
+                              <TextField fx:id="txtEmailAddress" prefHeight="40.0" prefWidth="675.0" styleClass="textfield" stylesheets="@../../../../resources/stylesheet.css" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="62.0" prefWidth="200.0" spacing="5.0">
+                           <children>
+                              <Label contentDisplay="RIGHT" graphicTextGap="6.0" prefHeight="17.0" text="Company Industry">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="chIndustry" prefHeight="41.0" prefWidth="484.0" stylesheets="@../../../../resources/stylesheet.css">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></ComboBox>
+                           </children>
+                        </VBox>
+                        <HBox spacing="10.0">
+                           <children>
+                              <VBox prefHeight="62.0" prefWidth="200.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label contentDisplay="RIGHT" graphicTextGap="6.0" prefHeight="17.0" text="City">
+                                       <font>
+                                          <Font name="Arial Bold" size="14.0" />
+                                       </font>
+                                       <graphic>
+                                          <Circle fill="#ffb61d" radius="3.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                                       </graphic>
+                                    </Label>
+                                    <TextField fx:id="txtCity" prefHeight="40.0" prefWidth="675.0" styleClass="textfield" stylesheets="@../../../../resources/stylesheet.css" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="10.0" layoutY="10.0" prefHeight="62.0" prefWidth="200.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label contentDisplay="RIGHT" graphicTextGap="6.0" prefHeight="17.0" text="Province">
+                                       <font>
+                                          <Font name="Arial Bold" size="14.0" />
+                                       </font>
+                                       <graphic>
+                                          <Circle fill="#ffb61d" radius="3.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                                       </graphic>
+                                    </Label>
+                                    <TextField fx:id="txtProvince" prefHeight="40.0" prefWidth="675.0" styleClass="textfield" stylesheets="@../../../../resources/stylesheet.css" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="389.0" layoutY="10.0" prefHeight="62.0" prefWidth="200.0" spacing="5.0">
+                                 <children>
+                                    <Label contentDisplay="RIGHT" graphicTextGap="6.0" prefHeight="17.0" text="Zipcode">
+                                       <font>
+                                          <Font name="Arial Bold" size="14.0" />
+                                       </font>
+                                       <graphic>
+                                          <Circle fill="#ffb61d" radius="3.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                                       </graphic>
+                                    </Label>
+                                    <TextField fx:id="txtZipcode" prefHeight="40.0" prefWidth="675.0" styleClass="textfield" stylesheets="@../../../../resources/stylesheet.css" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <VBox prefHeight="134.0" prefWidth="482.0" spacing="5.0">
+                           <children>
+                              <Label contentDisplay="RIGHT" graphicTextGap="6.0" prefHeight="17.0" text="Address Line">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <Circle fill="#ffb61d" radius="3.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                                 </graphic>
+                              </Label>
+                              <TextArea fx:id="txtAddressLine" prefHeight="113.0" prefWidth="482.0" promptText="Unit or Room No., Floor, Bldg. Name, House or Bldg. No., Street, Barangay, Subdivision, Village" style="-fx-background-radius: 8;" stylesheets="@../../../../resources/stylesheet.css" wrapText="true">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </TextArea>
+                           </children>
+                        </VBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="43.0" prefWidth="473.0" spacing="10.0">
+                           <children>
+                              <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#closeStage" prefHeight="37.0" prefWidth="120.0" styleClass="btnBordered" stylesheets="@../../../../resources/stylesheet.css" text="Cancel">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                              <Button fx:id="btnSave" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="37.0" prefWidth="120.0" styleClass="btnSave" stylesheets="@../../../../resources/stylesheet.css" text="Save">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="25.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

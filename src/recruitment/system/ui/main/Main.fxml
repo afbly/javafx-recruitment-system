@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recruitment.system.ui.main.MainController">
+   <children>
+      <BorderPane prefHeight="650.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <AnchorPane prefHeight="650.0" prefWidth="9.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="TOP_CENTER" layoutX="15.0" layoutY="202.0" prefHeight="164.0" prefWidth="50.0" spacing="5.0" AnchorPane.bottomAnchor="284.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Button fx:id="btnDashboard" mnemonicParsing="false" onAction="#btnDashboardOnAction" opacity="0.6" prefHeight="35.0" prefWidth="30.0" styleClass="sidebar_opt" stylesheets="@../../../../resources/stylesheet.css">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/0-dashboard.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Dashboard" />
+                           </tooltip>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="btnJob" layoutX="17.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnJobOnAction" opacity="0.6" prefHeight="35.0" prefWidth="30.0" styleClass="sidebar_opt" stylesheets="@../../../../resources/stylesheet.css">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/0-job.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Job" />
+                           </tooltip>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="btnClient" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnClientOnAction" opacity="0.6" prefHeight="35.0" prefWidth="30.0" styleClass="sidebar_opt" stylesheets="@../../../../resources/stylesheet.css">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/0-client.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Client" />
+                           </tooltip>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="btnCandidate" layoutX="17.0" layoutY="128.0" mnemonicParsing="false" onAction="#btnCandidateOnAction" opacity="0.6" prefHeight="35.0" prefWidth="30.0" styleClass="sidebar_opt" stylesheets="@../../../../resources/stylesheet.css">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/0-applicant.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Candidate" />
+                           </tooltip>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="30.0" fitWidth="41.0" layoutX="25.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../resources/icon.png" />
+                     </image>
+                  </ImageView>
+                  <VBox alignment="TOP_CENTER" layoutX="15.0" layoutY="533.0" prefHeight="103.0" prefWidth="50.0" spacing="10.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="15.0">
+                     <children>
+                        <Button fx:id="btnRecruiter" layoutX="17.0" layoutY="128.0" mnemonicParsing="false" onAction="#btnRecruiterOnAction" opacity="0.6" prefHeight="35.0" prefWidth="30.0" styleClass="sidebar_opt" stylesheets="@../../../../resources/stylesheet.css">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/0-recruiter.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Recruiter" />
+                           </tooltip>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="btnOut" layoutX="17.0" layoutY="10.0" mnemonicParsing="false" opacity="0.6" prefHeight="35.0" prefWidth="30.0" styleClass="sidebar_opt" stylesheets="@../../../../resources/stylesheet.css">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/0-off.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Log out" />
+                           </tooltip>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="-15.0" />
+               </BorderPane.margin>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane BorderPane.alignment="CENTER">
+               <children>
+                  <StackPane fx:id="container" layoutX="72.0" layoutY="-1.0" prefHeight="650.0" prefWidth="914.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="-1.0">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </StackPane>
+                  <AnchorPane fx:id="pnDashboard" layoutX="26.0" prefHeight="650.0" prefWidth="880.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="89.0" prefHeight="210.0" prefWidth="935.0" spacing="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="89.0">
+                           <children>
+                              <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="199.0" prefWidth="250.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5;">
+                                 <effect>
+                                    <DropShadow blurType="GAUSSIAN" color="#b5b5b5" height="40.47" radius="20.057499999999997" width="41.76" />
+                                 </effect>
+                                 <children>
+                                    <HBox alignment="CENTER" prefWidth="273.0" spacing="10.0">
+                                       <children>
+                                          <ImageView fitHeight="53.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../icons/045-positive%20review.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="57.0" prefWidth="175.0">
+                                             <children>
+                                                <Label fx:id="lblCountHire" style="-fx-font-size: 25;" text="Count" />
+                                                <Label style="-fx-font-size: 13; -fx-font-weight: Bold; -fx-text-fill: #666666;" text="TODAY'S HIRE" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="15.0" right="15.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER" layoutX="659.0" layoutY="10.0" prefHeight="199.0" prefWidth="250.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5;">
+                                 <effect>
+                                    <DropShadow blurType="GAUSSIAN" color="#b5b5b5" height="40.47" radius="20.057499999999997" width="41.76" />
+                                 </effect>
+                                 <children>
+                                    <HBox alignment="CENTER" prefWidth="273.0" spacing="10.0">
+                                       <children>
+                                          <ImageView fitHeight="53.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../icons/002-job%20search.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="57.0" prefWidth="175.0">
+                                             <children>
+                                                <Label fx:id="lblCountFilled" style="-fx-font-size: 25;" text="Count" />
+                                                <Label style="-fx-font-size: 13; -fx-font-weight: Bold; -fx-text-fill: #666666;" text="TODAY'S FILLED ORDER" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="15.0" right="15.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER" layoutX="488.0" layoutY="10.0" prefHeight="174.0" prefWidth="358.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5;">
+                                 <effect>
+                                    <DropShadow blurType="GAUSSIAN" color="#b5b5b5" height="40.47" radius="20.057499999999997" width="41.76" />
+                                 </effect>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <children>
+                                    <Label style="-fx-font-size: 13; -fx-font-weight: Bold; -fx-text-fill: #666666;" text="MONTHLY APPLICATION" />
+                                    <StackPane fx:id="appInfo" prefHeight="212.0" prefWidth="347.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets left="20.0" right="20.0" />
+                           </padding>
+                        </HBox>
+                        <Label fx:id="lblGreeting" layoutX="20.0" layoutY="46.0" styleClass="greetings" stylesheets="@../../../../resources/stylesheet.css" text="Greetings" />
+                        <VBox layoutX="37.0" layoutY="316.0" prefHeight="267.0" prefWidth="893.0" spacing="10.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5;" AnchorPane.leftAnchor="40.0">
+                           <effect>
+                              <DropShadow blurType="GAUSSIAN" color="#b5b5b5" height="40.47" radius="20.057499999999997" width="41.76" />
+                           </effect>
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                           <children>
+                              <Label style="-fx-font-size: 15; -fx-font-weight: Bold; -fx-text-fill: #666666;" text="NEARING START DATE" />
+                              <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="868.0" spacing="5.0">
+                                 <children>
+                                    <Label styleClass="det-label" stylesheets="@../../../../resources/stylesheet.css" text="Sort by:" />
+                                    <ComboBox fx:id="cbSortDate" onAction="#btnCbSortDateOnAction" prefHeight="41.0" prefWidth="150.0" stylesheets="@../../../../resources/stylesheet.css">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></ComboBox>
+                                 </children>
+                              </HBox>
+                              <TableView fx:id="tableView" prefHeight="204.0" prefWidth="675.0" stylesheets="@../../../../resources/stylesheet.css">
+                                <columns>
+                                  <TableColumn fx:id="colJobID" editable="false" prefWidth="65.0" sortable="false" text="ID" />
+                                  <TableColumn fx:id="colJobTitle" editable="false" prefWidth="382.0" sortable="false" text="Job Title" />
+                                    <TableColumn fx:id="colClient" editable="false" prefWidth="272.0" sortable="false" text="Client" />
+                                    <TableColumn fx:id="colStartDate" editable="false" prefWidth="148.0" sortable="false" text="Start Date" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

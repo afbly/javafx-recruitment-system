@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pnListApplications" prefHeight="650.0" prefWidth="880.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recruitment.system.ui.listapplication.ListApplicationController">
+   <children>
+      <HBox alignment="BOTTOM_LEFT" layoutY="-2.0" prefHeight="50.0" prefWidth="880.0" style="-fx-background-color: #FFFFFF; -fx-border-radius: 10;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label styleClass="jobtitle" stylesheets="@../../../../resources/stylesheet.css" text="Applications">
+               <font>
+                  <Font name="Noto Sans Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </HBox>
+      <VBox layoutX="209.0" layoutY="98.0" prefHeight="537.0" prefWidth="662.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="98.0">
+         <children>
+            <TableView fx:id="tableView" editable="true" prefHeight="500.0" stylesheets="@../../../../resources/stylesheet.css">
+               <columns>
+                  <TableColumn fx:id="colAppID" prefWidth="65.0" text="ID" />
+                  <TableColumn fx:id="colApplicant" prefWidth="207.0" text="Applicant Name" />
+                  <TableColumn fx:id="colAppDate" prefWidth="159.0" text="Application Date" />
+                  <TableColumn fx:id="colAppStatus" prefWidth="146.0" text="Status" />
+                  <TableColumn fx:id="colEmail" prefWidth="190.0" text="Email Address" />
+                  <TableColumn fx:id="colLocation" prefWidth="213.0" text="Location" />
+                  <TableColumn fx:id="colExperience" prefWidth="148.0" text="Years of Experience" />
+               </columns>
+            </TableView>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+      <HBox alignment="CENTER_RIGHT" layoutX="14.0" layoutY="66.0" prefHeight="37.0" prefWidth="860.0" spacing="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <children>
+            <StackPane alignment="CENTER_RIGHT" prefHeight="37.0" prefWidth="430.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <TextField fx:id="txtSearch" prefHeight="41.0" prefWidth="810.0" promptText="Search Applicant ID, Name, Status, Email Address, Location, Years of Experience" style="-fx-font-size: 13;" styleClass="textfield" stylesheets="@../../../../resources/stylesheet.css" />
+                  <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/0-search.png" />
+                     </image>
+                     <StackPane.margin>
+                        <Insets right="5.0" />
+                     </StackPane.margin>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <ComboBox fx:id="cbFilter" onAction="#cbFilterOnAction" prefHeight="37.0" prefWidth="183.0" stylesheets="@../../../../resources/stylesheet.css" />
+            <Button fx:id="btnCreate" mnemonicParsing="false" onAction="#btnCreateOnAction" prefHeight="37.0" prefWidth="151.0" styleClass="addJobBtn" stylesheets="@../../../../resources/stylesheet.css" text="Add Application">
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" color="WHITE" height="69.19" radius="29.4" spread="0.14" width="50.41" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
